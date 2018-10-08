@@ -1,5 +1,4 @@
-class Api::V1::UsersController < ApplicationController
-  before_action :authenticate_user, except: [:create]
+class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
 
   # GET /users
@@ -47,6 +46,6 @@ class Api::V1::UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.permit(:name, :phone, :username, :email, :position_id, :is_mobile,:password, :password_confirmation)
+      params.require(:user).permit(:name, :phone, :password_digest, :username, :email, :position_id, :is_mobile)
     end
 end
