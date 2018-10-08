@@ -23,15 +23,15 @@ ActiveRecord::Schema.define(version: 20181008182832) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
+    t.string   "name",                       null: false
     t.string   "phone"
-    t.string   "password_digest"
-    t.string   "username"
-    t.string   "email"
+    t.string   "password_digest",            null: false
+    t.string   "username",                   null: false
+    t.string   "email",           limit: 55, null: false
     t.integer  "position_id"
     t.boolean  "is_mobile"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["position_id"], name: "index_users_on_position_id", using: :btree
     t.index ["username"], name: "index_users_on_username", unique: true, using: :btree

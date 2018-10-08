@@ -1,3 +1,4 @@
 class User < ApplicationRecord
-  belongs_to :position
+	has_secure_password
+  	belongs_to :position
 end
