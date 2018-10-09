@@ -5,12 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Position.create(latitud: '0',
-	longitude: '0')
+# Position.create(latitud: '0',
+# 	longitude: '0')
+# User.create(name: 'leo',
+# 	password: 'linlin',
+# 	password_confirmation: 'linlin',
+# 	username: 'leolin',
+# 	email: 'leolin07@hotmail.com',
+# 	position_id: 1
+# 	)
+
 User.create(name: 'leo',
 	password: 'linlin',
 	password_confirmation: 'linlin',
 	username: 'leolin',
-	email: 'leolin07@hotmail.com',
-	position_id: 1
+	email: 'leolin07@hotmail.com'
 	)

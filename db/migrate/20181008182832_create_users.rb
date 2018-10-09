@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :password_digest,null: false
       t.string :username,null: false
       t.string :email,null: false,:limit => 55
-      t.references :position, foreign_key: true
+      t.references :position, foreign_key: true, null:true
       t.boolean :is_mobile
 
       t.timestamps
